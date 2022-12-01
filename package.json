@@ -1,0 +1,15 @@
+{
+  "name": "aoc-node-starter",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx aoct start"
+  },
+  "author": {
+    "name": "mariofdezzz",
+    "url": "https://github.com/mariofdezzz"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "aoct": "^0.2.2"
+  }
+}
