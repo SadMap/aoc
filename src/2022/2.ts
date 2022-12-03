@@ -60,18 +60,21 @@ const part2 = (input: Array<string>) => {
   for (const game of input) {
     const [opponent,end] = game.split(" ")
     switch (end) {
-      case "X":
+      case "X": {
         const myMove = winMap.filter(w => w.w.keys.indexOf(opponent) !== -1)[0].l
         points+=(myMove.score+Points.lose)
         break
-      case "Y":
-        const myTool = tools.filter(t => t.keys.indexOf(opponent) !== -1)[0]
-        points+=(myTool.score+Points.draw)
+      }
+      case "Y": {
+        const myMove = tools.filter(t => t.keys.indexOf(opponent) !== -1)[0]
+        points+=(myMove.score+Points.draw)
         break;
-      case "Z":
-        const myWin = winMap.filter(w => w.l.keys.indexOf(opponent) !== -1)[0].w
-        points+=(myWin.score+Points.win)
+      }
+      case "Z": {
+        const myMove = winMap.filter(w => w.l.keys.indexOf(opponent) !== -1)[0].w
+        points+=(myMove.score+Points.win)
         break;
+      }
       default:
         break;
     }
