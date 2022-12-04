@@ -41,7 +41,6 @@ const part2 = (input: Array<string>) => {
     else if (group.backpacks.length == 2) {
       group.backpacks.push(backpack)
       group.symbol = alphabet.findIndex(l => group.backpacks.every(b => b.includes(l)))+1
-      console.log(group,group.symbol)
       points+=group.symbol
     }
     else {
